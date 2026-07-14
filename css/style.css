@@ -123,11 +123,21 @@ nav{
   transition:all .2s ease;
 }
 .nav-cta:hover{background:var(--blue); color:var(--ink);}
+.nav-links .nav-links-cta{display:none;}
 .nav-toggle{
   display:none;
-  background:none; border:1px solid var(--line); color:var(--text);
-  font-size:13px; padding:8px 12px; cursor:pointer;
+  background:none; border:1px solid var(--line);
+  padding:10px 9px; cursor:pointer;
 }
+.nav-toggle .bar{
+  display:block; width:20px; height:2px;
+  background:var(--text);
+  transition:transform .25s ease, opacity .25s ease;
+}
+.nav-toggle .bar + .bar{margin-top:5px;}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 @media (max-width:820px){
   .nav-links{
     display:none;
@@ -138,7 +148,11 @@ nav{
   }
   .nav-links.open{display:flex;}
   .nav-links a{padding:16px 32px; border-bottom:1px solid rgba(127,176,204,0.1); width:100%;}
+  .nav-links .nav-links-cta{display:block; font-size:13px; color:var(--gold);}
   .nav-toggle{display:inline-block;}
+  .nav-cta{display:none;}
+  .logo img{height:48px; width:48px;}
+  .logo span.wordmark{display:none;}
 }
 
 /* PAGE HERO (used on sub-pages) */
@@ -197,16 +211,6 @@ nav{
   display:inline-block;
 }
 .btn-ghost:hover{border-color:var(--blue); color:var(--text);}
-
-/* SITE PLAN DIAGRAM */
-.siteplan{margin-top:90px; padding:40px 32px 30px; border:1px solid rgba(127,176,204,0.25);}
-.siteplan-label{display:flex; justify-content:space-between; font-size:11px; color:var(--text-dim-2); margin-bottom:18px;}
-.siteplan svg{width:100%; height:auto;}
-.siteplan a.node-link{cursor:pointer;}
-.node-label{font-family:'IBM Plex Mono', monospace; font-size:12px; fill:var(--text-dim);}
-.node-title{font-family:'Space Grotesk', sans-serif; font-size:16px; font-weight:600; fill:#fff;}
-.siteplan a.node-link:hover rect,
-.siteplan a.node-link:hover circle{stroke:var(--gold);}
 
 /* SECTION SHELL */
 section{padding:120px 0; position:relative;}
