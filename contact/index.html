@@ -2,86 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Naja Projects</title>
-<meta name="description" content="Get in touch with Naja Projects — Portal demos, coaching sessions, and Build inquiries.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Naja Projects</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-<header>
-  <nav>
-    <a href="/" class="logo">
-      <img src="/assets/logo-icon-navy.png" alt="Naja Projects logo">
-      <span class="wordmark">Naja Projects</span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/portal/">Portal</a>
-      <a href="/coaching/">Coaching</a>
-      <a href="/build/">Build</a>
-      <a href="/pipeline/">Pipeline</a>
-      <a href="/contact/" class="active">Contact</a>
-      <a href="/contact/" class="nav-links-cta mono">Start a project</a>
-    </div>
-    <a href="/contact/" class="nav-cta mono">Start a project</a>
-  </nav>
+<header class="site-nav">
+<div class="row">
+<a href="../" class="brand"><img src="../assets/logo-icon-navy.png" alt="Naja Projects"><span>Naja Projects</span></a>
+<nav class="links"><a href="../">Home</a><a href="../tech/">Naja-ware</a><a href="../coaching/">Coaching</a><a href="../build/">Build</a><a href="../pipeline/">Pipeline</a><a href="../contact/" class="active">Contact</a></nav>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<a href="../contact/" class="cta mono">Start a project</a>
+</div>
 </header>
-
 <main>
 
-  <section class="page-hero grid-bg">
-    <div class="wrap">
-      <div class="eyebrow mono">Contact</div>
-      <h1 class="reveal">Have a plan you want<br>a second <em>opinion</em> on?</h1>
-      <p class="reveal">Whether it's a coaching session, a Portal demo, or a plot of land — start with a message.</p>
-    </div>
-  </section>
-
-  <section class="tight">
-    <div class="wrap">
-      <div class="contact-grid reveal">
-        <div>
-          <ul class="contact-list">
-            <li>
-              <span class="clabel mono">Nick Damen</span>
-              <a class="cvalue" href="mailto:nick.damen@asnojojo.com?subject=Coaching%20session%20request">nick.damen@asnojojo.com</a>
-            </li>
-            <li>
-              <span class="clabel mono">Joris Jonckers</span>
-              <a class="cvalue" href="mailto:joris@asnojojo.com?subject=Project%20inquiry">joris@asnojojo.com</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="callout-box on-dark">
-          <h4 class="mono">Before you write</h4>
-          <p>Tell us which venture you're reaching out about (Portal, Coaching, or Build)
-            and a line on what you're trying to get done. It helps us route your message
-            to the right person and reply faster.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+<div class="hero-fx" aria-hidden="true"><div class="line line1"></div><div class="line line2"></div></div><img class="hero-mark" src="../assets/logo-icon-transparent.png" alt="" aria-hidden="true">
+<div class="wrap">
+<div class="eyebrow mono"><span class="rule"></span>Contact</div>
+<h1>Have a plan you want<br>a second <em>opinion</em> on?</h1>
+<p>Whether it&#39;s a coaching session, a Naja-ware demo, or a plot of land, start with a message.</p>
+</div>
+</section>
+<section class="section on-paper">
+<div class="tron-lines" aria-hidden="true"><div class="h1"></div><div class="h2"></div><div class="v1"></div></div>
+<div class="wrap detail-grid-even" style="align-items:stretch">
+<div style="background:var(--bg-panel);padding:8px 28px">
+<ul class="contact-list">
+<li><span class="label mono">Nick Damen</span><a href="mailto:nick.damen@example.com">nick.damen@example.com</a></li>
+<li><span class="label mono">Joris Jonckers</span><a href="mailto:joris@example.com">joris@example.com</a></li>
+</ul>
+</div>
+<div class="callout on-paper"><h4>Before you write</h4><p>Tell us which venture you're reaching out about (Naja-ware, Coaching, or Build) and a line on what you're trying to get done. It helps us route your message to the right person and reply faster.</p></div>
+</div>
+</section>
 
 </main>
-
-<footer>
-  <div class="wrap footer-row">
-    <div class="mono">NAJA PROJECTS © 2026</div>
-    <div class="mono">PORTAL · COACHING · BUILD · PIPELINE</div>
-    <div class="mono">DRAWN &amp; BUILT, NOT JUST PLANNED</div>
-  </div>
+<footer class="site-footer">
+<div class="wrap row">
+<div class="mono">NAJA PROJECTS © 2026</div>
+<div class="mono">NAJA-WARE · COACHING · BUILD · PIPELINE</div>
+<div class="mono">DRAWN &amp; BUILT, NOT JUST PLANNED</div>
+<div class="links"><a href="../privacy/">Privacy</a><button id="cookie-reopen">Cookie settings</button></div>
+</div>
 </footer>
-
-<script src="/js/script.js"></script>
+<div class="cookie-banner" id="cookie-banner">
+<h4>Cookies</h4>
+<p>We use analytics cookies to understand how visitors use this site. <a href="../privacy/">Learn more</a></p>
+<div class="cookie-actions"><button class="decline" id="cookie-decline">Decline</button><button class="accept" id="cookie-accept">Accept</button></div>
+</div>
+<script src="../js/script.js"></script>
 </body>
 </html>
