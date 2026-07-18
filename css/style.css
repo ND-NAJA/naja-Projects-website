@@ -98,7 +98,7 @@ img{display:block;max-width:100%}
 @media (max-width:560px){.grid-4,.grid-2{grid-template-columns:1fr}}
 .card-venture{background:var(--bg-panel);padding:34px 26px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:background .25s ease}
 .card-venture:hover{background:var(--bg-panel-2)}
-.card-venture .label{font-size:11px;color:var(--text-dim-2)}
+.card-venture .label{font-size:11px;color:var(--accent)}
 .card-venture h3{font-size:1.25rem;color:#fff;margin-top:18px}
 .card-venture p{font-size:13.5px;color:var(--text-dim);margin-top:10px}
 .card-venture .meta{margin-top:24px;font-size:10px;color:var(--blue-400)}
