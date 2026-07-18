@@ -1,0 +1,17 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Cards" subtitle="Venture, pipeline, coaching-quad" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="background:var(--bg);padding:20px"></div>
+<script type="text/babel">
+const { Card } = window.NajaProjectsDesignSystem_b735cb;
+ReactDOM.render(<div style={{display:'flex', flexDirection:'column', gap:20}}>
+  <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:1, background:'var(--border-on-dark)', border:'1px solid var(--border-on-dark)'}}>
+    <Card kind="venture" label="01 / PORTAL" title="Naja Portal" description="The operating system for running a hands-on business." meta="Live · Base / Pro / Custom" href="#" />
+    <Card kind="venture" label="02 / COACHING" title="Naja Coaching" description="One-on-one coaching for founders." meta="Booking now" href="#" />
+  </div>
+  <div style={{display:'flex', gap:1, background:'var(--border-on-dark)', border:'1px solid var(--border-on-dark)'}}>
+    <Card kind="pipe" label="Concept" title="Corner hospitality stand" description="A fast, friendly local stop." />
+    <Card kind="coach" label="Sales" title="When do you bring sales in?" description="Timing your first hire or channel." />
+  </div>
+</div>, document.getElementById('root'));
+</script>

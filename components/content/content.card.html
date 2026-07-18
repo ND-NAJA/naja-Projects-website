@@ -1,0 +1,13 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Content blocks" subtitle="Callout, feature list, tier table, contact list" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="background:var(--bg);padding:24px;display:flex;flex-direction:column;gap:20px"></div>
+<script type="text/babel">
+const { CalloutBox, FeatureList, TierTable, ContactList } = window.NajaProjectsDesignSystem_b735cb;
+ReactDOM.render(<>
+  <CalloutBox title="How a session works" onDark>No slide decks. You bring the decision you're stuck on.</CalloutBox>
+  <FeatureList items={["Document management, shared across every job", "Planning that connects sales and delivery"]} />
+  <TierTable tiers={[{name:'Base', subtitle:'for solo teams', features:['Documents & planning']}, {name:'Pro', subtitle:'for growing crews', features:['Everything in Base','Reporting'], highlighted:true}]} />
+  <ContactList items={[{label:'Nick Damen', value:'nick.damen@example.com', href:'#'}]} />
+</>, document.getElementById('root'));
+</script>
