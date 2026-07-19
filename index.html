@@ -16,7 +16,7 @@
 <a href="" class="brand"><img src="assets/logo-icon-navy.png" alt="Naja Projects"><span>Naja Projects</span></a>
 <nav class="links"><a href="" class="active">Home</a><a href="tech/">Naja-ware</a><a href="coaching/">Coaching</a><a href="build/">Build</a><a href="pipeline/">Pipeline</a><a href="contact/">Contact</a></nav>
 <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-<a href="contact/" class="cta mono">Start a project</a>
+<a href="contact/" class="cta mono"><span class="cta-full">Start a project</span><span class="cta-short">Start</span></a>
 </div>
 </header>
 <main>
@@ -24,12 +24,12 @@
 <section class="hero home">
 <div class="hero-fx" aria-hidden="true"><div class="line line1"></div><div class="line line2"></div></div><img class="hero-mark" src="assets/logo-icon-transparent.png" alt="" aria-hidden="true">
 <div class="wrap">
-<div class="eyebrow mono"><span class="rule"></span>Naja Projects · Venture Studio, est. 2026</div>
-<h1>We draft the plan.<br>Then we <em>help you</em> build your company.</h1>
-<p>Naja Projects designs, creates, and coaches new ventures. A business platform built for founders who dare to succeed than never start.</p>
+<div class="eyebrow mono fade-up" style="animation-delay:.05s"><span class="rule"></span>Naja Projects · Venture Studio, est. 2026</div>
+<h1 class="fade-up" style="animation-delay:.15s">We draft the plan.<br>Then we <em>help you</em> build your company.</h1>
+<p class="fade-up" style="animation-delay:.25s">Naja Projects designs, creates, and coaches new ventures. A business platform built for founders who dare to succeed than never start.</p>
 </div>
 </section>
-<div class="wrap" style="margin-top:-60px;margin-bottom:60px;display:flex;gap:18px;flex-wrap:wrap">
+<div class="wrap fade-up" style="animation-delay:.35s;margin-top:-60px;margin-bottom:60px;display:flex;gap:18px;flex-wrap:wrap">
 <a class="btn btn-primary" href="contact/">Contact us</a>
 <a class="btn btn-ghost" href="#ventures">See what we're building ↓</a>
 </div>
@@ -41,11 +41,11 @@
 <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--text-on-paper);max-width:560px">Four disciplines, one studio.</h2></div>
 <div class="mono" style="font-size:11px;color:var(--text-on-paper-dim-2);text-align:right;max-width:240px">Every venture shares the same playbook: plan it properly, then build it right.</div>
 </div>
-<div class="grid-4">
-<a class="card-venture" href="tech/"><div><div class="label mono">01 / NAJA-WARE</div><h3>Naja-ware</h3><p>Websites, apps, SaaS models and custom software, including Naja Portal, our own business operating system.</p></div><div class="meta mono">Live · Web · App · SaaS</div></a>
-<a class="card-venture" href="coaching/"><div><div class="label mono">02 / COACHING</div><h3>Naja Coaching</h3><p>One-on-one coaching for founders on sales, tech, strategy and marketing, whatever stage you're stuck at.</p></div><div class="meta mono">Booking now</div></a>
-<a class="card-venture" href="build/"><div><div class="label mono">03 / BUILD</div><h3>Naja Build</h3><p>Project development for land and housing, from plot to keys, with timber-frame construction partners.</p></div><div class="meta mono">In construction</div></a>
-<a class="card-venture" href="pipeline/"><div><div class="label mono">04 / PIPELINE</div><h3>Naja Ventures</h3><p>Smaller concepts we're testing and building out, from hospitality to new property plays.</p></div><div class="meta mono">Early stage</div></a>
+<div class="grid-4 grid-fan">
+<a class="card-venture" href="tech/"><div><div class="label mono">01 / NAJA-WARE</div><h3>Naja-ware</h3><p>Websites, apps, SaaS models and custom software, including Naja Portal, our own business operating system.</p><p class="more">Naja Portal is where every other venture plugs in — one login across coaching, build and pipeline.</p></div><div class="meta mono"><span class="status-dot live" aria-hidden="true"></span>Live · Web · App · SaaS</div></a>
+<a class="card-venture" href="coaching/"><div><div class="label mono">02 / COACHING</div><h3>Naja Coaching</h3><p>One-on-one coaching for founders on sales, tech, strategy and marketing, whatever stage you're stuck at.</p><p class="more">Sessions run remote or in person, scoped to whatever's actually blocking you this week.</p></div><div class="meta mono"><span class="status-dot booking" aria-hidden="true"></span>Booking now</div></a>
+<a class="card-venture" href="build/"><div><div class="label mono">03 / BUILD</div><h3>Naja Build</h3><p>Project development for land and housing, from plot to keys, with timber-frame construction partners.</p><p class="more">We manage site selection through to handover, so you're not chasing five contractors yourself.</p></div><div class="meta mono"><span class="status-dot building" aria-hidden="true"></span>In construction</div></a>
+<a class="card-venture" href="pipeline/"><div><div class="label mono">04 / PIPELINE</div><h3>Naja Ventures</h3><p>Smaller concepts we're testing and building out, from hospitality to new property plays.</p><p class="more">Two concepts in active testing right now, with more moving through the pipeline behind them.</p></div><div class="meta mono"><span class="status-dot early" aria-hidden="true"></span>Early stage</div></a>
 </div>
 </div>
 </section>
@@ -53,8 +53,13 @@
 <div class="tron-lines" aria-hidden="true"><div class="h1"></div><div class="h2"></div><div class="v1"></div></div>
 <div class="wrap">
 <h2 style="font-size:clamp(2rem,4.6vw,3.2rem);color:#fff;max-width:700px;margin:0 auto">Have a plan you want a second opinion on?</h2>
-<p style="color:var(--text-dim);margin-top:20px;max-width:480px;margin-left:auto;margin-right:auto">Whether it's a coaching session or a Naja-ware demo, start with a conversation.</p>
-<div style="display:flex;justify-content:center;gap:18px;margin-top:40px;flex-wrap:wrap">
+<p style="color:var(--text-dim);margin-top:20px;max-width:480px;margin-left:auto;margin-right:auto">Tell us what you're after, and we'll point you the right way.</p>
+<div class="intent-toggle">
+<button type="button" class="active" data-intent="coaching">I need coaching</button>
+<button type="button" data-intent="software">I need software</button>
+</div>
+<p class="intent-answer" id="intent-answer">Start with a coaching call — we'll dig into where you're stuck and map next steps together. <a class="accent-link" href="coaching/">See how coaching works →</a></p>
+<div style="display:flex;justify-content:center;gap:18px;margin-top:32px;flex-wrap:wrap">
 <a class="btn btn-primary" href="contact/">Get in touch</a>
 <a class="btn btn-ghost" href="#ventures">Browse ventures</a>
 </div>
