@@ -4,18 +4,59 @@ document.addEventListener('DOMContentLoaded',function(){
   var nav=document.querySelector('.site-nav');
   if(toggle&&nav){toggle.addEventListener('click',function(){nav.classList.toggle('open')});}
 
+  document.querySelectorAll('.nav-dropdown').forEach(function(dd){
+    var caret=dd.querySelector('.nav-caret');
+    if(!caret)return;
+    caret.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      var isOpen=dd.classList.toggle('open');
+      caret.setAttribute('aria-expanded',isOpen?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    document.querySelectorAll('.nav-dropdown.open').forEach(function(dd){
+      if(!dd.contains(e.target))dd.classList.remove('open');
+    });
+  });
+
   document.querySelectorAll('.feature-item > button').forEach(function(btn){
     btn.addEventListener('click',function(){btn.parentElement.classList.toggle('open')});
   });
 
   var banner=document.getElementById('cookie-banner');
   var reopen=document.getElementById('cookie-reopen');
+  var requiredMsg=document.getElementById('cookie-required-msg');
+  var alreadyAccepted=sessionStorage.getItem('naja-cookies-accepted')==='1';
   function showBanner(){if(banner){banner.classList.add('shown')}}
   function hideBanner(){if(banner){banner.classList.remove('shown')}}
-  setTimeout(showBanner,600);
-  document.getElementById('cookie-accept')?.addEventListener('click',hideBanner);
-  document.getElementById('cookie-decline')?.addEventListener('click',hideBanner);
+  if(!alreadyAccepted){
+    banner&&banner.classList.add('gated');
+    document.body.classList.add('cookie-gate');
+    showBanner();
+  }
+  document.getElementById('cookie-accept')?.addEventListener('click',function(){
+    hideBanner();
+    document.body.classList.remove('cookie-gate');
+    banner&&banner.classList.remove('gated');
+    if(requiredMsg){requiredMsg.style.display='none'}
+    sessionStorage.setItem('naja-cookies-accepted','1');
+  });
+  document.getElementById('cookie-decline')?.addEventListener('click',function(){
+    if(requiredMsg){requiredMsg.style.display='block'}
+  });
   reopen?.addEventListener('click',function(e){e.preventDefault();showBanner()});
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target);}
+      });
+    },{threshold:0.15,rootMargin:'0px 0px -60px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in-view');});
+  }
+
 
   var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -33,7 +74,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var answer=document.getElementById('intent-answer');
     var answers={
       coaching:'Start with a coaching call \u2014 we\u2019ll dig into where you\u2019re stuck and map next steps together. <a class="accent-link" href="coaching/">See how coaching works \u2192</a>',
-      software:'Start with a Naja-ware demo \u2014 we\u2019ll walk through what we\u2019d build and how Naja Portal fits in. <a class="accent-link" href="tech/">See Naja-ware \u2192</a>'
+      software:'Start with a Naja-ware demo \u2014 we\u2019ll walk through what we\u2019d build and how Portal fits in. <a class="accent-link" href="tech/">See Naja-ware \u2192</a>'
     };
     intentToggle.querySelectorAll('button').forEach(function(btn){
       btn.addEventListener('click',function(){

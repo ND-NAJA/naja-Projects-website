@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy — Naja Projects</title>
+<title>Privacy | Naja Projects</title>
 <link rel="icon" href="../favicon.ico">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,10 +12,19 @@
 <body>
 <header class="site-nav">
 <div class="row">
-<a href="../" class="brand"><img src="../assets/logo-icon-navy.png" alt="Naja Projects"><span>Naja Projects</span></a>
-<nav class="links"><a href="../" class="active">Home</a><a href="../tech/">Naja-ware</a><a href="../coaching/">Coaching</a><a href="../build/">Build</a><a href="../pipeline/">Pipeline</a><a href="../contact/">Contact</a></nav>
+<a href="../index.html" class="brand"><img src="../assets/logo-icon-navy.png" alt="Naja Projects"><span>Naja Projects</span></a>
+<nav class="links"><a href="../index.html" class="active">Home</a><div class="nav-dropdown">
+<a href="../tech/index.html">Naja-ware</a><button type="button" class="nav-caret" aria-label="Show Naja-ware products" aria-expanded="false">▾</button>
+<div class="nav-dropdown-menu">
+<div>
+<a href="../portal/index.html">Portal</a>
+<a href="../momentum/index.html">Momentum</a>
+<a href="../vision/index.html">Vision</a>
+</div>
+</div>
+</div><a href="../coaching/index.html">Coaching</a><a href="../build/index.html">Build</a><a href="../pipeline/index.html">Pipeline</a><a href="../contact/index.html">Contact</a></nav>
 <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-<a href="../contact/" class="cta mono"><span class="cta-full">Start a project</span><span class="cta-short">Start</span></a>
+<a href="../contact/index.html" class="cta mono"><span class="cta-full">Start a project</span><span class="cta-short">Start</span></a>
 </div>
 </header>
 <main>
@@ -30,7 +39,17 @@
 </section>
 <section class="section on-paper" style="padding:0 0 120px">
 <div class="wrap" style="max-width:760px;color:var(--text-on-paper-dim);font-size:14.5px;line-height:1.7">
-<p>Placeholder privacy copy — replace with your actual policy text before publishing.</p>
+<p style="margin-bottom:28px">Naja Projects ("we", "us") runs this site and the ventures listed on it: Naja-ware, Naja Coaching, Naja Build and our pipeline concepts. This page explains what we collect when you visit, and why.</p>
+<h4 style="font-size:15px;color:var(--text-on-paper);margin-bottom:10px">What we collect</h4>
+<p style="margin-bottom:24px">Basic analytics (pages viewed, referring site, device and browser type) collected only if you accept analytics cookies. If you get in touch through the contact page or email, we keep the name, email address and message you send us so we can reply.</p>
+<h4 style="font-size:15px;color:var(--text-on-paper);margin-bottom:10px">Cookies</h4>
+<p style="margin-bottom:24px">We use a single analytics cookie to understand how visitors move through the site. Nothing is set until you accept it in the banner shown on your first visit. Declining means no analytics cookie is stored, and the rest of the site works exactly the same either way. You can change your choice any time via "Cookie settings" in the footer.</p>
+<h4 style="font-size:15px;color:var(--text-on-paper);margin-bottom:10px">How we use it</h4>
+<p style="margin-bottom:24px">Analytics data helps us see which pages are useful and which aren't. Contact details are used only to respond to you and, if relevant, route your message to the right person across our ventures. We don't sell or share your information with third parties for marketing.</p>
+<h4 style="font-size:15px;color:var(--text-on-paper);margin-bottom:10px">Your rights</h4>
+<p style="margin-bottom:24px">You can ask us what we hold about you, ask us to correct it, or ask us to delete it, at any time. Just email one of the addresses on the <a href="../contact/index.html" style="color:var(--accent)">contact page</a>.</p>
+<h4 style="font-size:15px;color:var(--text-on-paper);margin-bottom:10px">Questions</h4>
+<p>If anything here is unclear, reach out. See the <a href="../contact/index.html" style="color:var(--accent)">contact page</a> for the right person to ask.</p>
 </div>
 </section>
 
@@ -40,13 +59,14 @@
 <div class="mono">NAJA PROJECTS © 2026</div>
 <div class="mono">NAJA-WARE · COACHING · BUILD · PIPELINE</div>
 <div class="mono">DRAWN &amp; BUILT, NOT JUST PLANNED</div>
-<div class="links"><a href="../privacy/">Privacy</a><button id="cookie-reopen">Cookie settings</button></div>
+<div class="links"><a href="../privacy/index.html">Privacy</a><button id="cookie-reopen">Cookie settings</button></div>
 </div>
 </footer>
 <div class="cookie-banner" id="cookie-banner">
 <h4>Cookies</h4>
-<p>We use analytics cookies to understand how visitors use this site. <a href="../privacy/">Learn more</a></p>
+<p>We use analytics cookies to understand how visitors use this site. <a href="../privacy/index.html">Learn more</a></p>
 <div class="cookie-actions"><button class="decline" id="cookie-decline">Decline</button><button class="accept" id="cookie-accept">Accept</button></div>
+<p id="cookie-required-msg" style="display:none;margin-top:14px;margin-bottom:0;font-size:12px;color:var(--accent-hover)">You need to accept cookies to enter the site.</p>
 </div>
 <script src="../js/script.js"></script>
 </body>
